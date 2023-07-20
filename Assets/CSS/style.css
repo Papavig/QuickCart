@@ -1,0 +1,29 @@
+.h-image {
+    background-image: url("https://i.postimg.cc/t403yfn9/home2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.home_txt {
+    text-align: left;
+    padding: 30px;
+}
+
+.collectio {
+    font-size: 1.2rem;
+    color: #ff6b6b;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home_label p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
