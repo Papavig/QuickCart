@@ -1,53 +1,35 @@
 .h-image {
-    background-image: url("../Images/main.png");
-    background-size: cover;
-    background-position: center;
-    height: 650px;
+  background-image: url("../Images/main.png");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
 }
 
 .home_txt {
-    text-align: left;
-    padding: 50px;
-    padding-top: 95px;
+  text-align: left;
+  padding: 50px;
+  padding-top: 95px;
 }
 
 .collectio {
-    font-size: 1.2rem;
-    color: #ff6b6b;
-    margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  margin-bottom: 5px;
 }
 
 h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .home_label p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .hide {
-        display: none;
-    }
-}
-
-.box-area{
-    width: 930px;
-}
-
-.right-box{
-    padding: 40px 30px 40px 40px;
-}
-
-::placeholder{
-    font-size: 16px;
-}
-.rounded-4{
-    border-radius: 20px;
-}
-.rounded-5{
-    border-radius: 30px;
+.imgBox {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
