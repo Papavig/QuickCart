@@ -33,3 +33,66 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
+
+.Btn {
+  padding: 15px 25px;
+  color: white;
+  background: black;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-card{
+  padding: 10px 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.con-label p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.con-info {
+  font-size: 1rem;
+  color: #ff6b6b;
+  margin-bottom: 5px;
+}
+
+.home-form {
+  border: 1px solid gray;
+  margin: 15px 15px;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.login_label p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.login_label h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.login-form{
+  border: 1px solid gray;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.login-btn{
+  padding: 12px 25px;
+  color: white;
+  background: black;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
