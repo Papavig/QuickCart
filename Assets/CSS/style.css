@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@700&family=Source+Code+Pro&family=Varela+Round&display=swap');
+
+body{
+  font-family: 'Varela Round', sans-serif;
+}
+
 .h-image {
   background-image: url("../Images/main.png");
   background-size: cover;
@@ -13,18 +19,20 @@
 
 .collectio {
   font-size: 1.2rem;
+  font-family: 'Source Code Pro', monospace;
   color: #ff6b6b;
   margin-bottom: 5px;
 }
 
 h2 {
   font-size: 3rem;
+  font-family: 'Anybody', cursive;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .home_label p {
-  font-size: 1.4rem;
+  font-size: 19px;
   margin-bottom: 20px;
 }
 
@@ -45,6 +53,13 @@ h2 {
   cursor: pointer;
 }
 
+.card-heading{
+  font-size: 2.2rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .btn-card{
   padding: 10px 25px;
   font-size: 14px;
@@ -56,8 +71,16 @@ h2 {
   margin-bottom: 20px;
 }
 
+.con-label h2 {
+  font-size: 3rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .con-info {
   font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
   color: #ff6b6b;
   margin-bottom: 5px;
 }
@@ -71,19 +94,18 @@ h2 {
 
 .login_label p {
   font-size: 1rem;
-  margin-bottom: 5px;
 }
 
 .login_label h2 {
   font-size: 3rem;
+  font-family: 'Anybody', cursive;
   font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .login-form{
   border: 1px solid gray;
   padding: 15px 20px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .login-btn{
