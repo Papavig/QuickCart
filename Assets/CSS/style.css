@@ -5,16 +5,15 @@ body{
 }
 
 .h-image {
-  background-image: url("../Images/main.png");
+  background-image: url("../Images/hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 650px;
 }
 
 .home_txt {
   text-align: left;
-  padding: 50px;
-  padding-top: 95px;
+  padding: 90px;
+  padding-top: 120px;
 }
 
 .collectio {
@@ -25,7 +24,7 @@ body{
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Anybody', cursive;
   font-weight: bold;
   margin-bottom: 15px;
@@ -117,4 +116,24 @@ h2 {
   font-size: 14px;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+@media (max-width:600px) {
+  .collectio{
+    font-size: 1.2rem;
+  }
+  .home-t{
+    display: none;
+  }
+  .home-para{
+    display: none;
+  }
+  .home_txt{
+    padding: 0;
+    padding-top: 0;
+  }
+  .Btn {
+  font-size: 10px;
+  padding: 10px 20px;
+}
 }
