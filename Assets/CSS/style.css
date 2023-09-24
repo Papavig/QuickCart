@@ -47,7 +47,7 @@ h2 {
   background: black;
   outline: none;
   border: none;
-  font-size: 14px;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -133,7 +133,6 @@ h2 {
     padding-top: 0;
   }
   .Btn {
-  font-size: 10px;
   padding: 10px 20px;
 }
 }
