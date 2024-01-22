@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@700&family=Source+Code+Pro&family=Varela+Round&display=swap');
+
+body{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.h-image {
+  background-image: url("../Images//hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home_txt {
+  text-align: left;
+  padding: 90px;
+  padding-top: 120px;
+}
+
+.collectio {
+  font-size: 1.2rem;
+  font-family: 'Source Code Pro', monospace;
+  color: #ff6b6b;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home_label p {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.imgBox {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Btn {
+  padding: 15px 25px;
+  color: white;
+  background: black;
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.card-heading{
+  font-size: 2.2rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-card{
+  padding: 10px 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.con-label p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.con-label h2 {
+  font-size: 3rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.con-info {
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+  color: #ff6b6b;
+  margin-bottom: 5px;
+}
+
+.home-form {
+  border: 1px solid gray;
+  margin: 15px 15px;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.login_label p {
+  font-size: 1rem;
+}
+
+.login_label h2 {
+  font-size: 3rem;
+  font-family: 'Anybody', cursive;
+  font-weight: bold;
+}
+
+.login-form{
+  border: 1px solid gray;
+  padding: 15px 20px;
+  font-size: 12px;
+}
+
+.login-btn{
+  padding: 12px 25px;
+  color: white;
+  background: black;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+@media (max-width:600px) {
+  .collectio{
+    font-size: 1.2rem;
+  }
+  .home-t{
+    display: none;
+  }
+  .home-para{
+    display: none;
+  }
+  .home_txt{
+    padding: 0;
+    padding-top: 0;
+  }
+  .Btn {
+  padding: 10px 20px;
+}
+}

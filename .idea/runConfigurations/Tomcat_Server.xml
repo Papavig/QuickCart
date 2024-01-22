@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Tomcat Server" type="com.poratu.idea.plugins.tomcat">
+    <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+    <predefined_log_file enabled="true" id="Tomcat Access Log" />
+    <predefined_log_file id="Tomcat Catalina Log" />
+    <predefined_log_file id="Tomcat Manager Log" />
+    <predefined_log_file id="Tomcat Host Manager Log" />
+    <option name="catalinaBase" value="C:\Users\being\.SmartTomcat\QuickCart\QuickCart" />
+    <option name="contextPath" value="/QuickCart" />
+    <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+    <option name="envOptions">
+      <map />
+    </option>
+    <option name="extraClassPath" value="" />
+    <option name="tomcatInfo">
+      <TomcatInfo>
+        <option name="name" value="Apache Tomcat/10.1.17" />
+        <option name="path" value="C:/Framework/apache-tomcat-10.1.17" />
+        <option name="version" value="10.1.17.0" />
+      </TomcatInfo>
+    </option>
+    <option name="vmOptions" value="" />
+    <module name="QuickCart" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
