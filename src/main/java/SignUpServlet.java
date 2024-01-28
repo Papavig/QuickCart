@@ -19,10 +19,10 @@ public class SignUpServlet extends HttpServlet {
         String city = request.getParameter("city");
 
         // Validate if passwords match and are not null
-//        if (password == null || !password.equals(confirmPassword)) {
-//            out.println("<script>alert('Passwords do not match or are null. Please try again.'); window.location='ForwardServlet?destination=signup';</script>");
-//            return;
-//        }
+        if (password == null || !password.equals(confirmPassword)) {
+            out.println("<script>alert('Passwords do not match. Please try again.'); window.location='ForwardServlet?destination=signup';</script>");
+            return;
+        }
 
         try {
             // Assuming you have a method to get the database connection

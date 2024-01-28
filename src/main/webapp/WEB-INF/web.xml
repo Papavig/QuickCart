@@ -20,6 +20,11 @@
     <servlet-class>SignUpServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>OrderServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>ForwardServlet</servlet-name>
     <url-pattern>/ForwardServlet</url-pattern>
@@ -33,5 +38,10 @@
   <servlet-mapping>
     <servlet-name>SignupServlet</servlet-name>
     <url-pattern>/SignupServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
   </servlet-mapping>
 </web-app>

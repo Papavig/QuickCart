@@ -4,6 +4,8 @@ import jakarta.servlet.http.*;
 import java.sql.*;
 
 public class LoginServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
@@ -27,7 +29,12 @@ public class LoginServlet extends HttpServlet {
                 // User authenticated
                 // You might want to store user information in session for future use
                 HttpSession session = request.getSession();
-                session.setAttribute("email", email);
+                session.setAttribute("loggedInUser", email);
+
+                // Set a cookie to remember the user
+                Cookie userCookie = new Cookie("loggedInUser", email);
+                userCookie.setMaxAge(60 * 60 * 24 * 30);
+                response.addCookie(userCookie);
 
                 // Redirect to home.jsp
                 response.sendRedirect("index.jsp");
