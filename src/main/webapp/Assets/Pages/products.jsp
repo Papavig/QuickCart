@@ -53,7 +53,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=1">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=9">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=4">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=2">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=7">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=12">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=5">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=8">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=6">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -232,7 +232,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=3">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=10">BUY NOW</a>
               </div>
             </div>
           </div>
@@ -268,7 +268,7 @@
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <a class="btn btn-outline-dark btn-card mt-auto" href="ForwardServlet?destination=login">BUY NOW</a>
+                <a class="btn btn-outline-dark btn-card mt-auto" href="OrderServlet?product_id=11">BUY NOW</a>
               </div>
             </div>
           </div>

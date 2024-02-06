@@ -65,25 +65,20 @@ public class OrderServlet extends HttpServlet {
 
     private int retrieveUserIdByEmail(String email) {
         try (Connection connection = DbConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(
-                     "SELECT user_id FROM QuickCart_users WHERE email = ?")) {
+             PreparedStatement statement = connection.prepareStatement("SELECT user_id FROM QuickCart_users WHERE email = ?")) {
 
-            // Set the email parameter
             statement.setString(1, email);
-
-            // Query to get the user ID based on email from the QuickCart_users table
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                // Retrieve and return the user ID
                 return resultSet.getInt("user_id");
             }
 
         } catch (SQLException e) {
-            e.printStackTrace(); // Log or handle the exception appropriately
+            // Log the exception using a logging framework
+            e.printStackTrace();
         }
 
-        // Return -1 to indicate an invalid user ID
         return -1;
     }
 
@@ -106,7 +101,8 @@ public class OrderServlet extends HttpServlet {
             return rowsAffected > 0;
 
         } catch (SQLException e) {
-            e.printStackTrace(); // Log or handle the exception appropriately
+            // Log the exception for further analysis
+            e.printStackTrace();
         }
 
         // Return false to indicate that the order processing failed
