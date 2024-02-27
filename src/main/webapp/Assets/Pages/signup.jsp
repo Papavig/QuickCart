@@ -15,46 +15,34 @@
     <title>QuickCart - REGISTER</title>
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top bg-opacity-75"
-    >
-      <div class="container-fluid px-4 px-lg-5">
-        <a class="navbar-brand" href="ForwardServlet"
-          ><img
-            src="Assets/Images//bag.svg"
-            alt="icon"
-            class="px-2 pb-1"
-          />QuickCart</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="ForwardServlet">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ForwardServlet?destination=products">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="ForwardServlet?destination=login">Login</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bg-opacity-75">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand" href="ForwardServlet"><img src="Assets/Images//bag.svg" alt="icon"
+                                                         class="px-2 pb-1" />QuickCart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mx-auto"> <!-- Set margin to auto to align items in the middle -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ForwardServlet">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ForwardServlet?destination=products">Products</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="ForwardServlet?destination=cart">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="ForwardServlet?destination=login">Login</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
       <div class="row border p-3 bg-white shadow">
