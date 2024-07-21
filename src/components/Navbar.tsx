@@ -85,7 +85,7 @@ function Navbar() {
         </div>
         <div className="hidden sm:flex justify-end space-x-6 px-2 pb-1 items-center">
           <Link
-            to={"/SignIn"}
+            to={"/sign-in"}
             className="flex items-center space-x-2 hover:scale-105 duration-200"
           >
             <UserRound className="h-4 w-auto mr-1" />

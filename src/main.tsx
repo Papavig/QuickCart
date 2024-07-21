@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import SignInPage from "./pages/Auth/SignInPage.tsx";
+import SignUpPage from "./pages/Auth/SignUpPage.tsx";
 
 const BrowserRouter = createBrowserRouter([
   {
@@ -16,12 +17,12 @@ const BrowserRouter = createBrowserRouter([
   },
 
   {
-    path: '/SignIn',
-    element: <SignInPage />
+    path: '/sign-up',
+    element: <SignUpPage />
   },
 
   {
-    path: '/LogIn',
+    path: '/sign-in',
     element: <SignInPage />
   }
 ]);
