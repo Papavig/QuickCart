@@ -26,6 +26,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+::selection {
+  background: #ebe2e2;
+  color: #00000085; 
+}
+
 @supports not selector(::-webkit-scrollbar) {
   body {
       scrollbar-color: var(--sb-thumb-color)

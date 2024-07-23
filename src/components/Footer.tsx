@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <>
+    <footer>
       <div></div>
       <div className="bg-primary p-6">
         <div className="flex items-center justify-between text-primary-foreground mx-8">
@@ -14,7 +14,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
 

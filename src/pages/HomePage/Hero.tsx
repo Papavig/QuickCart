@@ -22,11 +22,11 @@ function Hero() {
             with an unwavering commitment to exceptional quality.
           </h3>
           <motion.div
-            className="mt-4 w-max h-auto"
+            className="mt-4 w-max h-auto select-none"
             whileHover={{ scale: "0.95", rotate: "1.5deg" }}
             transition={{ duration: 0.3 }}
           >
-            <Link to={"/"}><Button>Shop now</Button></Link>
+            <Link to={"/sd"}><Button>Shop now</Button></Link>
           </motion.div>
         </div>
       </div>
