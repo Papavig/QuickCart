@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Hero from "./Hero"
 import NewsLetter from "./NewsLetter";
+import FeaturesPage from "./FeaturesPage";
 
 
 function HomePage() {
@@ -8,7 +10,9 @@ function HomePage() {
     <>
     < Navbar />
     < Hero />
+    < FeaturesPage />
     < NewsLetter />
+    < Footer />
     </>
   )
 }
