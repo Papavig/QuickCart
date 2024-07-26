@@ -3,8 +3,59 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <div className="bg-accent h-96"></div>
-      <div className="bg-primary p-6">
+      <div className="hidden sm:block h-max">
+        <div className="grid grid-cols-4 gap-4 py-8 px-6">
+          <div className="p-4">
+            <h1 className="font-Title font-semibold text-xl mb-2">SHOP</h1>
+            <ul className="flex flex-col gap-1 font-Highlight">
+              <li>MEN</li>
+              <li>WOMEN</li>
+              <li>SALE</li>
+              <li>GIFT CARD</li>
+            </ul>
+          </div>
+          <div className="p-4">
+            <h1 className="font-Title font-semibold text-xl mb-4">
+              OUR POLICIES
+            </h1>
+            <ul className="flex flex-col gap-1 font-Highlight">
+              <li>RETURN AND EXCHANGES</li>
+              <li>SHIPPING</li>
+              <li>PRIVACY POLICY</li>
+              <li>TERMS</li>
+              <li>COOKIE SETTING</li>
+            </ul>
+          </div>
+          <div className="p-4">
+            <h1 className="font-Title font-semibold text-xl mb-4">MORE</h1>
+            <ul className="flex flex-col gap-1 font-Highlight">
+              <li>ABOUT US</li>
+              <li>STORE LOCATION</li>
+              <li>DEVELOPER'S PORTFOLIO</li>
+            </ul>
+          </div>
+          <div className="bg-accent p-8 hidden lg:block">
+            <h1 className="text-3xl font-semibold font-Title mb-4">
+              CONTACT US
+            </h1>
+            <div className="flex flex-col gap-y-2 font-Highlight">
+              <p>
+                If you are interested in placing bulk orders, we offer a wide
+                range of stylish and high-quality clothes for all occasions.
+              </p>
+              <p>
+                <b>Address: </b> <br /> Navi Mumbai, Maharashtra, <br />{" "}
+                410206
+              </p>
+              <p>
+                {" "}
+                <b>Phone Number:</b> <br /> +91 9653314275
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-primary p-6 select-none">
         <div className="flex items-center justify-between text-primary-foreground mx-8">
           <div className="flex items-center">
             <Link to={"/"} className="px-2 pb-1 text-3xl font-cursive">
@@ -34,7 +85,7 @@ function Footer() {
               Instagram
             </a>
           </div>
-          <div className="">Created by Vignesh Esakkiappan</div>
+          <div className="hidden sm:block">Created by Vignesh Esakkiappan</div>
         </div>
       </div>
     </footer>
