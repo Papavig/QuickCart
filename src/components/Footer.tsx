@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <div className="hidden sm:block h-max">
-        <div className="grid grid-cols-4 gap-4 py-8 px-6">
+        <div className="grid grid-cols-4 gap-4 py-8 px-12">
           <div className="p-4">
             <h1 className="font-Title font-semibold text-xl mb-2">SHOP</h1>
             <ul className="flex flex-col gap-1 font-Highlight">
