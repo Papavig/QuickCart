@@ -1,7 +1,8 @@
 package beingvig.quickcartserver.controller;
 
-import beingvig.quickcartserver.entities.LoginRequest;
-import beingvig.quickcartserver.entities.LoginResponse;
+import beingvig.quickcartserver.utils.AuthResponse;
+import beingvig.quickcartserver.utils.LoginRequest;
+import beingvig.quickcartserver.utils.LoginResponse;
 import beingvig.quickcartserver.entities.User;
 import beingvig.quickcartserver.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,10 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-        String username = userService.authenticateUser(loginRequest.getEmail(), loginRequest.getPassword());
-        if (username != null) {
-            return ResponseEntity.ok(new LoginResponse(username));
+        AuthResponse authResponse = userService.authenticateUser(loginRequest.getEmail(), loginRequest.getPassword());
+
+        if (authResponse != null) {
+            return ResponseEntity.ok(authResponse);
         } else {
             return ResponseEntity.status(401).body("Invalid email or password");
         }

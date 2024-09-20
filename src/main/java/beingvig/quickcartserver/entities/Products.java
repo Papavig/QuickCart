@@ -3,37 +3,30 @@ package beingvig.quickcartserver.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Quick_Cart_Products")
 public class Products {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id")
-    private Long product_id;
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "description", length = 1000)
     private String description;
 
-    @Column(name = "price")
     private int price;
 
-    @Column(name = "category")
     private String category;
 
-    @Column(name = "image_url")
     private String image_url;
 
-    @Column(name = "stock_quantity", columnDefinition = "NUMBER DEFAULT 0")
+    @Column(columnDefinition = "NUMBER DEFAULT 0")
     private int stock_quantity;
 
     public Products() {
     }
 
     public Products(Long product_id, String name, String description, int price, String category, String image_url, int stockQuantity) {
-        this.product_id = product_id;
+        this.id = product_id;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -42,12 +35,12 @@ public class Products {
         this.stock_quantity = stockQuantity;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

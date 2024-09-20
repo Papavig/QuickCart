@@ -2,6 +2,8 @@ package beingvig.quickcartserver.services;
 
 import beingvig.quickcartserver.dao.UserDao;
 import beingvig.quickcartserver.entities.User;
+import beingvig.quickcartserver.utils.AuthResponse;
+import beingvig.quickcartserver.utils.Encryption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +14,31 @@ public class UserService {
     private UserDao userDao;
 
     public User registerUser(User user) {
-        return userDao.save(user);
+        try {
+
+            String encryptedPassword = Encryption.encrypt(user.getPassword());
+            user.setPassword(encryptedPassword);
+
+            return userDao.save(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public String authenticateUser(String email, String password) {
-        User user = userDao.findByEmail(email);
-        if (user != null && user.getPassword().equals(password)) {
-            return user.getUsername();
+
+    public AuthResponse authenticateUser(String email, String password) {
+        try {
+            User user = userDao.findByEmail(email);
+            if (user != null) {
+                String decryptedPassword = Encryption.decrypt(user.getPassword());
+
+                if (password.equals(decryptedPassword)) {
+                    return new AuthResponse(user.getId(), user.getUsername());
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return null;
     }

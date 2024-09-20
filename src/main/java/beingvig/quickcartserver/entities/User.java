@@ -3,43 +3,42 @@ package beingvig.quickcartserver.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Quick_Cart_Users")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long userId;
+    private Long id;
 
-    @Column(name = "username", nullable = false)
+    @Column(nullable = false)
     private String username;
 
-    @Column(name = "password", nullable = false)
+    @Column(nullable = false)
     private String password;
 
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(unique = true, nullable = false)
     private String email;
 
-    @Column(name = "role", nullable = false)
+    @Column(nullable = false)
     private String role;
 
     public User() {
     }
 
     public User(Long userId, String username, String password, String email, String role) {
-        this.userId = userId;
+        this.id = userId;
         this.username = username;
         this.password = password;
         this.email = email;
         this.role = role;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {

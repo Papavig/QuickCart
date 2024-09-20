@@ -7,55 +7,74 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "Quick_Cart_Cart")
 public class Cart {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cart_id")
-    private Long cartId;
+    private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
-    private User user;
-
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CartItem> cartItems;
-
-    @Column(nullable = false, updatable = false)
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+    private Long productId;
+    private Long userId;
+    private String productName;
+    private int quantity;
+    private float amount;
 
     public Cart() {
     }
 
-    public Cart(Long cartId, User user, List<CartItem> cartItems) {
-        this.cartId = cartId;
-        this.user = user;
-        this.cartItems = cartItems;
+    public Cart(Long id, Long productId, Long userId, String productName, int quantity, float amount) {
+        this.id = id;
+        this.productId = productId;
+        this.userId = userId;
+        this.productName = productName;
+        this.quantity = quantity;
+        this.amount = amount;
     }
 
-    public Long getCartId() {
-        return cartId;
+    public Long getId() {
+        return id;
     }
 
-    public void setCartId(Long cartId) {
-        this.cartId = cartId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public List<CartItem> getCartItems() {
-        return cartItems;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public float getAmount() {
+        return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
     }
 }

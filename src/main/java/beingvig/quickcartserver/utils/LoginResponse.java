@@ -1,4 +1,4 @@
-package beingvig.quickcartserver.entities;
+package beingvig.quickcartserver.utils;
 
 public class LoginResponse {
     private String username;
