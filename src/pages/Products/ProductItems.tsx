@@ -7,7 +7,6 @@ import { Product } from "@/Model/ProductModel";
 import { ProductService } from "@/Api/ProductService";
 import { Cart, CartService } from "@/Api/CartService";
 import { useNavigate, useParams } from "react-router-dom";
-import { OrderRequest, OrderService } from "@/Api/OrderService";
 import { toast, Toaster } from "sonner";
 import OrderButton from "@/components/OrderButton";
 
@@ -138,7 +137,7 @@ const Products: React.FC = () => {
               >
                 <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
               </Button>
-              <OrderButton product={product} displayedQuantity={displayedQuantity} userId={userId} />
+              <OrderButton product={product} displayedQuantity={displayedQuantity} userId={Number(userId)} />
             </div>
           </div>
         </div>
