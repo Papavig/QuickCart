@@ -49,7 +49,7 @@ const FeaturesPage: React.FC = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-                    {products.map((product) => (
+                    {products.slice(0, 6).map((product) => (
                         <div key={product.id} onClick={() => handleClick(product.id)} className="overflow-hidden">
                             <img
                                 src={product.image_url}

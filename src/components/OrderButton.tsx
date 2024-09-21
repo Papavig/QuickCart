@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { OrderService, OrderItem } from "@/Api/OrderService";
 import { Button } from "./ui/button";
+import { toast, Toaster } from "sonner";
 
 interface Product {
   id: number;
@@ -12,12 +13,14 @@ interface Props {
   product: Product;
   displayedQuantity: number;
   userId: number;
+  name: string,
 }
 
 const OrderButton: React.FC<Props> = ({
   product,
   displayedQuantity,
   userId,
+  name,
 }) => {
   const [loading, setLoading] = useState(false);
 
@@ -29,6 +32,7 @@ const OrderButton: React.FC<Props> = ({
       productName: product.name,
       quantity: displayedQuantity,
       amount: product.price * displayedQuantity,
+      userId: userId
     };
 
     try {
@@ -36,7 +40,7 @@ const OrderButton: React.FC<Props> = ({
         orderItems: [orderItem],
         userId: userId,
       });
-      alert("Order placed successfully!");
+      toast.success("Order placed successfully");
     } catch (err) {
       console.error("Error placing order:", err);
     } finally {
@@ -46,9 +50,10 @@ const OrderButton: React.FC<Props> = ({
 
   return (
     <div>
-      <Button onClick={handleBuyNow} disabled={loading}>
-        {loading ? "Placing Order..." : "Buy Now"}
+      <Button onClick={handleBuyNow} disabled={loading} className="w-full">
+        {loading ? "Placing Order..." : name}
       </Button>
+      <Toaster />
     </div>
   );
 };

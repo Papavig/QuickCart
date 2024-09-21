@@ -137,7 +137,7 @@ const Products: React.FC = () => {
               >
                 <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
               </Button>
-              <OrderButton product={product} displayedQuantity={displayedQuantity} userId={Number(userId)} />
+              <OrderButton product={product} displayedQuantity={displayedQuantity} userId={Number(userId)} name="Buy Now"/>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ export interface OrderItem {
     productName: string;
     quantity: number;
     amount: number;
+    userId: number;
 }
 
 export interface OrderRequest {

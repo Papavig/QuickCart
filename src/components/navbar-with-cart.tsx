@@ -1,18 +1,20 @@
 import { useState, useRef, useEffect } from "react";
 import { ShoppingCart, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import type { Cart } from '@/Api/CartService'; 
-import { CartService } from '@/Api/CartService'; 
+import type { Cart } from "@/Api/CartService";
+import { CartService } from "@/Api/CartService";
 import OrderButton from "./OrderButton";
 
 export function Cart() {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<Cart[]>([]); // State to hold cart items
+  const [cartItems, setCartItems] = useState<Cart[]>([]);
+  const [product, setProduct] = useState<Product | null>(null); // State for product
+  const [displayedQuantity, setDisplayedQuantity] = useState<number>(1); 
   const cartRef = useRef<HTMLDivElement>(null);
+
+  const userId = Number(localStorage.getItem("userId")); // Fetch userId once
 
   useEffect(() => {
     const fetchCartItems = async () => {
-      const userId = Number(localStorage.getItem('userId')); 
       if (!userId) {
         console.error("No user ID found in localStorage");
         return;
@@ -20,13 +22,17 @@ export function Cart() {
       try {
         const items = await CartService.getCartByUserId(userId);
         setCartItems(items);
+        // Assuming the product details come with the cart items
+        if (items.length > 0) {
+          setProduct(items[0]); // Set the first product as default
+        }
       } catch (error) {
         console.error("Error fetching cart items:", error);
       }
     };
 
     fetchCartItems();
-  }, []);
+  }, [userId]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -63,19 +69,17 @@ export function Cart() {
           <div className="p-4">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold">Cart</h2>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsCartOpen(false)}
-              >
+              <button onClick={() => setIsCartOpen(false)}>
                 <X className="h-4 w-4" />
-                <span className="sr-only">Close cart</span>
-              </Button>
+              </button>
             </div>
             {cartItems.length > 0 ? (
               <ul className="space-y-2">
                 {cartItems.map((item) => (
-                  <li key={item.id} className="flex justify-between items-center">
+                  <li
+                    key={item.id}
+                    className="flex justify-between items-center"
+                  >
                     <span>{item.productName}</span>
                     <span>₹{item.amount}</span>
                   </li>
@@ -84,7 +88,16 @@ export function Cart() {
             ) : (
               <p>Your cart is empty</p>
             )}
-            <OrderButton product={product} displayedQuantity={displayedQuantity} userId={userId} />
+            <div className="w-full flex justify-center mt-6">
+            {product && (
+              <OrderButton
+                product={product}
+                displayedQuantity={displayedQuantity}
+                userId={userId}
+                name="Checkout"
+              />
+            )}
+            </div>
           </div>
         </div>
       )}
