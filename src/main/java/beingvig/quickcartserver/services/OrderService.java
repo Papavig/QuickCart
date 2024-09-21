@@ -10,6 +10,7 @@ import beingvig.quickcartserver.entities.Products;
 import beingvig.quickcartserver.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,12 +30,10 @@ public class OrderService {
         this.productDao = productDao;
     }
 
+
+    @Transactional
     public List<OrderItem> placeOrder(List<OrderItem> orderItems, Long userId) {
-        // Process each order item and associate with userId
-        for (OrderItem orderItem : orderItems) {
-            // Assuming you're setting the user information and other properties
-            orderItemDao.save(orderItem);
-        }
+        orderItemDao.saveAll(orderItems);
 
         // Clear the user's cart after placing the order
         cartDao.deleteByUserId(userId);

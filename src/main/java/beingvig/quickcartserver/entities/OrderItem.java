@@ -10,18 +10,27 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long productId;
-
+    private Long userId;
     private int quantity;
     private float amount;
 
     public OrderItem() {
     }
 
-    public OrderItem(Long id, Long productId, int quantity, float amount) {
+    public OrderItem(Long id, Long productId, Long userId, int quantity, float amount) {
         this.id = id;
         this.productId = productId;
+        this.userId = userId;
         this.quantity = quantity;
         this.amount = amount;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public Long getId() {
