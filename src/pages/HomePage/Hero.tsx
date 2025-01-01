@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Button } from "../../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import HeroImg from "@/assets/images/hero.jpg";
 
 function Hero() {
   return (
     <div className="relative w-full -inset-0">
       <img
-        src="src\assets\images\hero.jpg"
+        src={HeroImg}
         alt="Image"
         className="rounded-md object-cover select-none pointer-events-none"
       />

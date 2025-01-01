@@ -1,6 +1,6 @@
 import pants from "@/assets/images/Pants.webp";
 import { Button } from "@/components/ui/button";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 function Pant() {
   return (
     <div className="container my-12 px-4">
@@ -21,7 +21,7 @@ function Pant() {
           fit you can trust.
         </p>
         <Button className="mt-4" onClick={() => {
-              toast.error("Unfortunately we dont have pants lol.");
+              toast.error("Unfortunately we don't have pants lol.");
             }}>See Details</Button>
       </div>
     </div>

@@ -48,7 +48,7 @@ function Category() {
       <div className="grid grid-cols-3 gap-4">
         <ImageCard src={Man} alt="Man" title="Man" />
         <ImageCard src={Women} alt="Women" title="Woman" />
-        <ImageCard src={Accessories} alt="Child" title="Child" />
+        <ImageCard src={Accessories} alt="Accessories" title="Accessories" />
       </div>
       <Toaster richColors />
     </div>

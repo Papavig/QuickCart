@@ -4,7 +4,7 @@ import { UserRound, ShoppingCart, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useNavigate } from "react-router-dom";
-import { Cart } from "./navbar-with-cart";
+//import { Cart } from "./navbar-with-cart";
 
 const MobileMenu = () => {
 
@@ -132,7 +132,7 @@ function Navbar() {
             {username ? username : "SIGN IN"}
           </Link>
 
-          <Cart />
+          {/* <Cart /> */}
         </div>
         <MobileMenu />
       </nav>
