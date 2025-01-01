@@ -24,10 +24,8 @@ services:
     image: mysql:8
     container_name: mysql-container
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: your_database_name
-      MYSQL_USER: your_username
-      MYSQL_PASSWORD: your_password
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: QuickCart
     ports:
       - "3306:3306"
     networks:
