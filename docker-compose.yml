@@ -5,7 +5,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "80:80"
     networks:
       - app-network
 
@@ -16,18 +16,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - mysql
-    networks:
-      - app-network
-
-  mysql:
-    image: mysql:8
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: QuickCart
-    ports:
-      - "3306:3306"
+      - react-app
     networks:
       - app-network
 
